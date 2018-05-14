@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/bootstrap.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/font-awesome.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/headhesive.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/magnific-popup.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/owl.carousel.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/owl.theme.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/switcher.core.min.css">
+
+    <link rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/main.css">
+    <link id="main-style" rel="stylesheet" href="@Url.Content("~/Content/Charity_Content/")css/color/yellow.css"> <!-- Choose your color, green, blue, yellow, red, darkblue, purple -->
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Charity_Content/")img/favicon.ico">
+
+</head>
+<body>
+
+    <!-- PRELOADING -->
+    <div id="preload">
+        <div class="preload">
+            <div class="loader">
+                Loading...
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="banner">
+        <nav class="navbar navbar-custom" role="navigation">
+            <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+            <div class="container">
+                <div data-scroll-header class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/home/Index"><img src="@Url.Content("~/Content/Charity_Content/")img/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="nav navbar-nav navbar-right nav-effect uppercase">
+                        <li><a data-scroll href="/Home/Index/#about"><span data-hover="About">About</span></a></li>
+                        @*<li><a data-scroll href="#program"><span data-hover="program">program</span></a></li>*@
+                        <li><a data-scroll href="/Home/Index/#stories"><span data-hover="stories">stories</span></a></li>
+                        @*<li><a data-scroll href="#events"><span data-hover="events">events</span></a></li>*@
+                        @*<li><a data-scroll href="#news"><span data-hover="news">news</span></a></li>*@
+                        <li><a  href="/Home/Login">login</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-lg-3">
+                    <h3 class="uppercase">zakat</h3>
+                    <p>Sed lacus lectus, consectetur commodo lobortis in, tincidunt ac risus. Suspendisse id ligula volutpat.</p>
+                    <div class="social">
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+
+                        <a href="#">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-lg-3">
+                    <h3 class="uppercase">contact</h3>
+
+                    <div class="address">
+                        <div class="icon">
+                            <i class="fa fa-lg fa-home"></i>
+                        </div>
+                        <p>1721 Merry Rabbit Village, Broadview, New York, 14010 US</p>
+                    </div>
+
+                    <div class="address">
+                        <div class="icon">
+                            <i class="fa fa-lg fa-phone"></i>
+                        </div>
+                        <p>(917) 162-6930</p>
+                    </div>
+
+                    <div class="address">
+                        <div class="icon">
+                            <i class="fa fa-lg fa-envelope"></i>
+                        </div>
+                        <p>info@company.org</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <h3 class="uppercase">newsletter</h3>
+                    <p>Etiam congue mi vitae eleifend ullamcorper. Vestibulum gravida aliquet purus, nec laoreet massa malesuada a.</p>
+                    <div id="newsletter" class="row">
+                        <div class="col-lg-9">
+                            <input type="email" id="newsletter_email">
+                        </div>
+                        <div class="col-lg-3">
+                            <button class="button button-big button-dark" onclick="newsletter_send();">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SUBFOOTER -->
+    <div class="subfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    @*<p class="pull-left">Charity.</p>
+
+                    <ul class="list-unstyled list-inline pull-right">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Connect</a></li>
+                    </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modernizr -->
+    <script src="@Url.Content("~/Content/Charity_Content/")js/modernizr.custom.js"></script>
+
+    <script src="@Url.Content("~/Content/Charity_Content/")js/jquery-1.11.0.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/bootstrap.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/headhesive.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/owl.carousel.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/jquery.magnific-popup.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/jquery.countTo.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/jquery.stellar.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/smooth-scroll.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/retina-1.1.0.min.js"></script>
+
+
+
+    <!-- map -->
+    <script src="@Url.Content("~/Content/Charity_Content/")js/map/d3.v3.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/map/topojson.v1.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/map/datamaps.world.min.js"></script>
+
+    <script src="@Url.Content("~/Content/Charity_Content/")js/main.js"></script>
+
+    <!-- demo only -->
+    <script src="@Url.Content("~/Content/Charity_Content/")js/switcher.core.min.js"></script>
+    <script src="@Url.Content("~/Content/Charity_Content/")js/switcher.load.js"></script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-3788027-10', 'themecube.net');
+        ga('send', 'pageview');
+
+    </script> 
+    <script type="text/javascript">
+
+          function show(input) {
+              if (input.files && input.files[0]) {
+                  var filerdr = new FileReader();
+                  filerdr.onload = function (e) {
+                      $('#user_img').attr('src', e.target.result);
+                  }
+                  filerdr.readAsDataURL(input.files[0]);
+              }
+          }
+    </script>
+
+</body>
+</html>

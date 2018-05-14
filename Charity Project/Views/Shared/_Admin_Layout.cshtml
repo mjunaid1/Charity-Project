@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Charity_Content/")img/favicon.ico">
+
+    <!-- Main style sheet -->
+
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Charity_Content/")css/style.css">
+
+
+    <!-- responsive style sheet -->
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/Charity_Content/")css/responsive.css">
+    <script src="@Url.Content("~/Content/Charity_Content/")js/jquery-1.11.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        @RenderBody()
+    </div>
+    <script type="text/javascript">
+
+        function show(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function (e) {
+                    $('#user_img').attr('src', e.target.result);
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>
