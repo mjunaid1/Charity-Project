@@ -401,8 +401,8 @@ header {
 /* STORIES */
 
 #stories {
-	background:#fac42b;
-	background-image: url(../img/map-black.png);
+    background: #ffffca;
+    background-image: url(../img/map-black.png);
     background-repeat: no-repeat;
     background-position: right bottom;
 }

@@ -222,10 +222,8 @@
     <Content Include="Content\Charity_Content\fonts\glyphicons-halflings-regular-4.html" />
     <Content Include="Content\Charity_Content\fonts\glyphicons-halflings-regular.html" />
     <Content Include="Content\Charity_Content\fonts\glyphicons-halflings-regulard41d.html" />
-    <Content Include="Content\Charity_Content\img\9.jpg" />
     <Content Include="Content\Charity_Content\img\about.png" />
     <Content Include="Content\Charity_Content\img\bg.jpg" />
-    <Content Include="Content\Charity_Content\img\dark-blur-blurred-gradient.jpg" />
     <Content Include="Content\Charity_Content\img\favicon.ico" />
     <Content Include="Content\Charity_Content\img\gallery-img1.png" />
     <Content Include="Content\Charity_Content\img\gallery-img2.png" />
@@ -248,12 +246,14 @@
     <Content Include="Content\Charity_Content\img\logo_program.png" />
     <Content Include="Content\Charity_Content\img\logo_story.png" />
     <Content Include="Content\Charity_Content\img\map-black.png" />
+    <Content Include="Content\Charity_Content\img\n1 %281%29.jpeg" />
     <Content Include="Content\Charity_Content\img\news1.png" />
     <Content Include="Content\Charity_Content\img\news2.png" />
     <Content Include="Content\Charity_Content\img\news3.png" />
     <Content Include="Content\Charity_Content\img\news4.png" />
     <Content Include="Content\Charity_Content\img\news5.png" />
     <Content Include="Content\Charity_Content\img\news6.png" />
+    <Content Include="Content\Charity_Content\img\pexels-photo-339144.jpeg" />
     <Content Include="Content\Charity_Content\img\plus.png" />
     <Content Include="Content\Charity_Content\img\program-bg.png" />
     <Content Include="Content\Charity_Content\img\program1.png" />

@@ -18,7 +18,7 @@
 
 <div class="container">
     <div class="col-md-12">
-        <h2 style="color:black;">Delete</h2>
+        <h2 style="color:black;">Delete Story</h2>
 
         <hr />
         <dl class="dl-horizontal">
@@ -60,10 +60,17 @@
         {
             @Html.AntiForgeryToken()
 
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
+            <div>
+               
+                <i class="fa fa-chevron-circle-left" style="font-size:x-large"> @Html.ActionLink("Back to List", "Index") </i>
+                
             </div>
+
+            <div>
+
+                <i class="fa fa-trash-o" style="font-size:x-large"> <input style="font-size:x-large" type="submit" value="Delete" class="btn btn-primary" /> </i>
+
+</div>
         }
     </div>
     </div>
