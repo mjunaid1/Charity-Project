@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Charity_Project.Database;
 using System.IO;
+using System.Web.Hosting;
 
 namespace Charity_Project.Controllers
 {
@@ -108,6 +109,8 @@ namespace Charity_Project.Controllers
                 //obj.SaveChanges();
                 image.SaveAs(path);
                 image1.SaveAs(path1);
+
+              
 
                 if (ModelState.IsValid)
                 {
@@ -282,6 +285,24 @@ namespace Charity_Project.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Stories_tbl stories_tbl = db.Stories_tbl.Find(id);
+
+          //  Directory.Delete(@"~/Videos/" + stories_tbl.VideoLink, true);
+            System.IO.File.Delete(HostingEnvironment.ApplicationPhysicalPath + "/Videos/" + stories_tbl.VideoLink);
+            System.IO.File.Delete(HostingEnvironment.ApplicationPhysicalPath + "/Img/" + stories_tbl.ImageLink);
+
+            //      System.IO.File fi = new System.IO.File();
+            ////      System.IO.FileInfo fi1 = new System.IO.FileInfo(@"~/Img/" + stories_tbl.ImageLink);
+            //      try
+            //      {
+
+            //          fi.Delete();
+            // //         fi1.Delete();
+
+            //      }
+            //      catch (System.IO.IOException e)
+            //      {
+            //          Console.WriteLine(e.Message);
+            //      }
             db.Stories_tbl.Remove(stories_tbl);
             db.SaveChanges();
             return RedirectToAction("Index");
